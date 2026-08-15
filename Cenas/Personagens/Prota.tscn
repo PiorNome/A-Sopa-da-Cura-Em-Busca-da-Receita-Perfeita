@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byuefp24mhl3g"]
 
-[ext_resource type="Script" uid="uid://dvrtk0yr87dq1" path="res://Script/prota.gd" id="1_u8e6d"]
+[ext_resource type="Script" uid="uid://dcm0gnyttakoh" path="res://Cenas/Personagens/prota.gd" id="1_8ed47"]
 [ext_resource type="Texture2D" uid="uid://dfj5bfc4ek3cw" path="res://Assets/Personas/character_9-16.png" id="2_mlm3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0p3"]
@@ -113,21 +113,21 @@ animations = [{
 "speed": 7.5
 }]
 
-[node name="Prota" type="Area2D" unique_id=663750232]
-scale = Vector2(2.5, 2.5)
-script = ExtResource("1_u8e6d")
-metadata/_edit_group_ = true
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=188786305 groups=["Prota"]]
+script = ExtResource("1_8ed47")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1158188314]
-position = Vector2(0, 0.5)
+position = Vector2(0, 1.25)
+scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_eg0p3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ogq8d")
 animation = &"Baixo"
-autoplay = "Baixo"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21384192]
+scale = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
