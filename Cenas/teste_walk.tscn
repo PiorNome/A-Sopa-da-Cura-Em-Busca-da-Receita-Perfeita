@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://h7e24jycoxur"]
 
-[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Prota.tscn" id="1_tg3cx"]
+[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="1_tg3cx"]
 
 [node name="TesteWalk" type="Node2D" unique_id=768755885]
 

@@ -1,7 +1,7 @@
 extends Area2D
 
 var velocity = Vector2.ZERO
-var speed = 250
+var speed = 150
 var screensize = Vector2(1920, 1080)
 
 # Called when the node enters the scene tree for the first time.
@@ -24,9 +24,7 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.animation = "Baixo"
 		elif velocity.y < 0:
 			$AnimatedSprite2D.animation = "Cima"
-		
-		$AnimatedSprite2D.play()
 	else:
-		$AnimatedSprite2D.frame = 0
+		$AnimatedSprite2D.frame = 1
 	
-	pass
+	$AnimatedSprite2D.play()
