@@ -1,33 +1,10 @@
 [gd_scene format=3 uid="uid://h7e24jycoxur"]
 
 [ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="1_tg3cx"]
+[ext_resource type="PackedScene" uid="uid://bphib2avugere" path="res://Cenas/Mapas/mapa.tscn" id="2_3fi47"]
 
 [node name="TesteWalk" type="Node2D" unique_id=768755885]
 
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=1910120105]
-offset_right = 360.0
-offset_bottom = 149.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1697161693]
-offset_left = 363.0
-offset_top = 207.0
-offset_right = 622.0
-offset_bottom = 375.0
-color = Color(1, 1, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=956416358]
-offset_left = 387.0
-offset_top = -4.0
-offset_right = 643.0
-offset_bottom = 168.0
-color = Color(1, 0, 1, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=717759040]
-offset_left = -2.0
-offset_top = 191.0
-offset_right = 199.0
-offset_bottom = 364.0
-color = Color(0.03529412, 1, 1, 1)
+[node name="Levelroot" parent="." unique_id=1276499071 instance=ExtResource("2_3fi47")]
 
 [node name="Prota" parent="." unique_id=663750232 instance=ExtResource("1_tg3cx")]
