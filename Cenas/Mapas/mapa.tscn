@@ -122,16 +122,16 @@ sources/1 = SubResource("TileSetAtlasSource_2b5ci")
 sources/3 = SubResource("TileSetAtlasSource_jcq8o")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(163, 164)
+size = Vector2(163, 133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(162.5, 163.5)
+size = Vector2(162.5, 128.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(168, 162)
+size = Vector2(168, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
-size = Vector2(164.5, 163)
+size = Vector2(164.5, 132)
 
 [node name="Levelroot" type="Node2D" unique_id=1276499071]
 
@@ -148,17 +148,17 @@ tile_set = SubResource("TileSet_yf5fn")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1783341010]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=920312267]
-position = Vector2(143.5, 337)
+position = Vector2(143.5, 321.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842733427]
-position = Vector2(431.75, 192.25)
+position = Vector2(431.75, 174.75)
 shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1451505764]
-position = Vector2(963, 291)
+position = Vector2(963, 273)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1253244671]
-position = Vector2(625.75, 433.5)
+position = Vector2(625.75, 418)
 shape = SubResource("RectangleShape2D_d0u6y")

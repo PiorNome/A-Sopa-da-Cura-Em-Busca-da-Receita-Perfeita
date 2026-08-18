@@ -8,3 +8,4 @@
 [node name="Levelroot" parent="." unique_id=1276499071 instance=ExtResource("2_3fi47")]
 
 [node name="Prota" parent="." unique_id=663750232 instance=ExtResource("1_tg3cx")]
+position = Vector2(19, 508)

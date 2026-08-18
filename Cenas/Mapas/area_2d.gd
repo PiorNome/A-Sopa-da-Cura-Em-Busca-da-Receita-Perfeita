@@ -7,4 +7,4 @@ extends Area2D
 
 func _on_body_entered(body) -> void:
 	if body.is_in_group("Prota"):
-		get_tree().change_scene_to_file("res://Cenas/teste_walk.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://Cenas/teste_walk.tscn")

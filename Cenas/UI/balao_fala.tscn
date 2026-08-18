@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c7eeq2b4v2xg1"]
+
+[ext_resource type="Script" uid="uid://dmiy3n62pwlmn" path="res://Script/ui.gd" id="1_tsvu3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dvf8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.30670264, 0.5056217, 0.52094144, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="ImageTexture" id="ImageTexture_duvjl"]
+
+[node name="balao_fala" type="Control" unique_id=1289510213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsvu3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=786409573]
+visible = false
+layout_mode = 0
+offset_left = 236.0
+offset_top = 512.0
+offset_right = 1026.0
+offset_bottom = 677.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1289474041]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 512.0
+offset_right = 1026.0
+offset_bottom = 677.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2dvf8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=303466891]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.22900002
+offset_left = 264.0
+offset_top = 530.0
+offset_right = 392.0
+offset_bottom = 493.12
+texture = SubResource("ImageTexture_duvjl")
+
+[node name="Label" type="Label" parent="." unique_id=1887055090]
+custom_minimum_size = Vector2(580, 125)
+custom_maximum_size = Vector2(580, 125)
+layout_mode = 0
+offset_left = 420.0
+offset_top = 535.0
+offset_right = 1000.0
+offset_bottom = 659.0
+theme_override_font_sizes/font_size = 18
+text = "Lorem ipsum dolor sit amet. Et earum galisum At dolores magni sed aliquid voluptates sit voluptatem vero et soluta nostrum hic voluptatum vitae! Sed adipisci expedita ut deserunt consectetur 33 dolorem nesciunt est consequatur exercitationem.
+"
+autowrap_mode = 2
