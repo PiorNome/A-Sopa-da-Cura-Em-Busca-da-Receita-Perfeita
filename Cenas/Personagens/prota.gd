@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const JUMP_VELOCITY = -400.0
 const SPEED = 150
+var vida = 3
 
 
 
@@ -31,3 +32,7 @@ func _physics_process(_delta: float) -> void:
 
 	# Move o personagem e lida com as colisões do TileMap automaticamente
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
