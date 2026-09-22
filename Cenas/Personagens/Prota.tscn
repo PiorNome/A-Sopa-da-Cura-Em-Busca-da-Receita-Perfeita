@@ -157,3 +157,5 @@ frame = 1
 scale = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

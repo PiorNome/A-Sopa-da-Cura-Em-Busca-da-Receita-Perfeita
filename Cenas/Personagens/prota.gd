@@ -35,4 +35,8 @@ func _physics_process(_delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if area.is_in_group("Ataque_Inimigo"):
+		vida -= 1
+		
+		if vida == 0:
+			pass # Cena de game over
