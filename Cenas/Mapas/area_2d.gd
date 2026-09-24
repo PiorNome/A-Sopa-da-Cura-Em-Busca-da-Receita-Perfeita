@@ -3,7 +3,12 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 
+@export_file() var proxima_cena
+@export var posicao_x: float
+@export var posicao_y:float
 
+func _ready() -> void:
+	pass
 
 func _on_body_entered(body) -> void:
 	if body.is_in_group("Prota"):

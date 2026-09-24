@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ccmb1212l1hmy"]
+
+[ext_resource type="Texture2D" uid="uid://df8vi2sp7bvcn" path="res://Assets/background/Top_Down_Kingdom_Tileset_FREE/Tilesets/Castle_1.png" id="1_r4pe6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blxdo"]
+texture = ExtResource("1_r4pe6")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 4.9285326, 1.9771438, 5.100458, 2.081273, 8, -1.9797487, 8, -1.9771438, -8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9285326, -6.0460486, 4.9858413, -6.046048, -8)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(6.0407696, -8, 8, -8, 8, 5.04315, 5.98874, 4.871224)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9285326, -1.9771438, 5.100458, -2.081273, 8, 1.9797487, 8, 1.9771438, -8)
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9858413, -1.9771433, 5.0431495, -2.081274, 8, 1.9797478, 8, 2.1490693, 4.9858413, 8, 4.9858418, 8, -8)
+5:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.9797487, -8, -2.1827993, 4.6701746, 8, 4.9747515, 8, -8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9285326, 8, 4.8712234, 8, -8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.9797487, -8, 2.1827993, 4.6701746, -8, 4.9747515, -8, -8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.8782225, -8, -1.9797478, 8, 1.9894733, 8, 1.9894736, 4.981771, 8, 4.9747515, 8, -8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9858413, -1.9771433, 5.0431495, -2.081274, 8, 1.9797478, 8, 2.1490693, 4.9858413, 8, 4.9858418, 8, -8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.8782225, -8, 1.9797478, 8, -1.9894733, 8, -1.9894736, 4.981771, -8, 4.9747515, -8, -8)
+2:2/0 = 0
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.8782225, -8, 1.9771442, 2.005798, -1.9771438, 2.005798, -2.0812721, -8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.9858413, -1.9771433, 5.0431495, 2.1490693, 4.9858413, 8, 4.9858418, 8, -8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.0184808, -8, 1.9721079, -8, 1.9903679, 8, -2.0146637, 8)
+
+[sub_resource type="TileSet" id="TileSet_o1gjo"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_blxdo")
+
+[node name="paredes" type="TileMapLayer" unique_id=898011065]
+light_mask = 31
+visibility_layer = 31
+scale = Vector2(2.5, 2.5)
+tile_set = SubResource("TileSet_o1gjo")
+collision_visibility_mode = 1

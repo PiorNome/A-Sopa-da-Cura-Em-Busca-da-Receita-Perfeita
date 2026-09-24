@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dsa4ncis7m1ls"]
+
+[ext_resource type="Script" uid="uid://c4jhlmsgtipu5" path="res://Script/main.gd" id="1_ruij7"]
+[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="2_ruij7"]
+
+[node name="Main" type="Node2D" unique_id=588342101]
+script = ExtResource("1_ruij7")
+
+[node name="Nó_mapa" type="Node2D" parent="." unique_id=1223805534]
+
+[node name="Nó_Prota" type="Node2D" parent="." unique_id=59210126]
+
+[node name="Prota" parent="Nó_Prota" unique_id=188786305 instance=ExtResource("2_ruij7")]

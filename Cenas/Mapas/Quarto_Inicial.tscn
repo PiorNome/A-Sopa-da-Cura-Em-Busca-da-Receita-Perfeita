@@ -4,37 +4,50 @@
 [ext_resource type="Texture2D" uid="uid://y6162mtnwdtr" path="res://Assets/background/furniture by Mullenratte/floor tiles/16x16_floor03.png" id="2_sevo2"]
 [ext_resource type="Texture2D" uid="uid://bo6rsbesjjd38" path="res://Assets/background/furniture by Mullenratte/floor tiles/16x16_floor04.png" id="3_uasfr"]
 [ext_resource type="Texture2D" uid="uid://b7vhka05xii2d" path="res://Assets/background/furniture by Mullenratte/floor tiles/16x16_floor01.png" id="4_yycl1"]
-[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="5_n317k"]
 [ext_resource type="Texture2D" uid="uid://df8vi2sp7bvcn" path="res://Assets/background/Top_Down_Kingdom_Tileset_FREE/Tilesets/Castle_1.png" id="5_sevo2"]
 [ext_resource type="Texture2D" uid="uid://454ytgm5uorh" path="res://Assets/background/Top_Down_Kingdom_Tileset_FREE/Tilesets/Floor_1.png" id="6_n317k"]
 [ext_resource type="Texture2D" uid="uid://bmc15pmk1enb6" path="res://Assets/background/Top_Down_Kingdom_Tileset_FREE/Others/Decor.png" id="7_0pfgt"]
-[ext_resource type="Script" uid="uid://de8058rwqfh7o" path="res://Cenas/Mapas/area_2d.gd" id="7_uasfr"]
 [ext_resource type="Texture2D" uid="uid://7dcqutt5csui" path="res://Assets/background/furniture by Mullenratte/16x16 sprites/16x16_table_round.png" id="8_1h01s"]
 [ext_resource type="Texture2D" uid="uid://ngj7g6b51ikc" path="res://Assets/background/furniture by Mullenratte/16x16 sprites/16x16_chair02_blue.png" id="9_rq0dx"]
+[ext_resource type="Script" uid="uid://b2ngxo4jb36lt" path="res://Script/portal.gd" id="11_rq0dx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0pfgt"]
+[sub_resource type="GDScript" id="GDScript_0pfgt"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$portal_para_rua.proxima_cena = \"res://Cenas/Mapas/rua_fora_quarto.tscn\"
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1h01s"]
 texture = ExtResource("1_4sfuc")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1h01s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq0dx"]
 texture = ExtResource("2_sevo2")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq0dx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10en7"]
 texture = ExtResource("3_uasfr")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10en7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71tu7"]
 texture = ExtResource("4_yycl1")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ogq8d"]
-sources/4 = SubResource("TileSetAtlasSource_0pfgt")
-sources/5 = SubResource("TileSetAtlasSource_1h01s")
-sources/6 = SubResource("TileSetAtlasSource_rq0dx")
-sources/7 = SubResource("TileSetAtlasSource_10en7")
+sources/4 = SubResource("TileSetAtlasSource_1h01s")
+sources/5 = SubResource("TileSetAtlasSource_rq0dx")
+sources/6 = SubResource("TileSetAtlasSource_10en7")
+sources/7 = SubResource("TileSetAtlasSource_71tu7")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uasfr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbe33"]
 texture = ExtResource("5_sevo2")
 0:0/0 = 0
 1:0/0 = 0
@@ -54,9 +67,9 @@ texture = ExtResource("5_sevo2")
 5:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_eg0p3"]
-sources/0 = SubResource("TileSetAtlasSource_uasfr")
+sources/0 = SubResource("TileSetAtlasSource_wbe33")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71tu7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km4ml"]
 texture = ExtResource("6_n317k")
 1:0/0 = 0
 3:0/0 = 0
@@ -79,7 +92,7 @@ texture = ExtResource("6_n317k")
 4:3/0 = 0
 5:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbe33"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_niau3"]
 texture = ExtResource("7_0pfgt")
 0:0/0 = 0
 1:0/0 = 0
@@ -100,19 +113,21 @@ texture = ExtResource("7_0pfgt")
 1:3/0 = 0
 2:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km4ml"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1bug"]
 texture = ExtResource("8_1h01s")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.5180216, -2.428093, -5.036044, 2.607952, -4.856185, 8, -2.6978807, 8, 1.6187286, 3.1475277, 4.3166103, -2.7878094, 4.3166103, -8, 1.6187286)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_niau3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yf2bb"]
 texture = ExtResource("9_rq0dx")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_yycl1"]
-sources/0 = SubResource("TileSetAtlasSource_71tu7")
-sources/1 = SubResource("TileSetAtlasSource_wbe33")
-sources/3 = SubResource("TileSetAtlasSource_km4ml")
-sources/4 = SubResource("TileSetAtlasSource_niau3")
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_km4ml")
+sources/1 = SubResource("TileSetAtlasSource_niau3")
+sources/3 = SubResource("TileSetAtlasSource_k1bug")
+sources/4 = SubResource("TileSetAtlasSource_yf2bb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogq8d"]
 size = Vector2(10, 286)
@@ -133,6 +148,7 @@ size = Vector2(224, 20)
 size = Vector2(27, 29)
 
 [node name="QuartoInicial" type="Node2D" unique_id=125267515]
+script = SubResource("GDScript_0pfgt")
 
 [node name="Chao" type="TileMapLayer" parent="." unique_id=1803280023]
 light_mask = 31
@@ -153,9 +169,6 @@ collision_visibility_mode = 1
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAFAAEAAAAEAAEAAAAFAAIAAAAGAAEAAAAFAAMAAAAEAAEAAAABAAMAAAADAAEAAAAKAAMAAAAFAAEAAAAFAAUAAAAEAAIAAAACAAUAAAAEAAMAAAADAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAAKAAQAAAAGAAEAAAAKAAIAAAAGAAEAAAABAAIAAAAGAAEAAAABAAQAAAAGAAEAAAACAAEAAAAEAAMAAAADAAEAAAAEAAMAAAAEAAEAAAAEAAMAAAAGAAEAAAAEAAMAAAAHAAEAAAAEAAMAAAAIAAEAAAAEAAMAAAAJAAEAAAAEAAMAAAAGAAMAAAAEAAMAAAAHAAMAAAAEAAMAAAAIAAMAAAAEAAMAAAAJAAMAAAAEAAMAAAACAAMAAAAEAAMAAAADAAMAAAAEAAMAAAAEAAMAAAAEAAMAAAAGAAUAAAAEAAMAAAAHAAUAAAAEAAMAAAAIAAUAAAAEAAMAAAAJAAUAAAAEAAMAAAAKAAUAAAAFAAIAAAABAAUAAAADAAIAAAABAAEAAAADAAAAAAAKAAEAAAAFAAAAAAAFAAQAAAAGAAEAAAACAAAAAQAAAAAAAAADAAAAAQABAAAAAAAKAAAAAQABAAIAAAAJAAAAAQAAAAIAAAAJAAIAAwAAAAAAAAAIAAIABAAAAAAAAAA=")
 tile_set = SubResource("TileSet_yycl1")
-
-[node name="Prota" parent="." unique_id=663750232 instance=ExtResource("5_n317k")]
-position = Vector2(219, 126)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2129193644]
 
@@ -179,11 +192,14 @@ shape = SubResource("RectangleShape2D_irt5y")
 position = Vector2(354, 0)
 shape = SubResource("RectangleShape2D_hyur1")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2053390185]
-script = ExtResource("7_uasfr")
+[node name="portal_para_rua" type="Area2D" parent="." unique_id=2053390185 groups=["portal"]]
+script = ExtResource("11_rq0dx")
+proxima_cena = "uid://cxxjtrwxjxm08"
+posicao_x = 460.0
+posicao_y = 166.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1331880410]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal_para_rua" unique_id=1331880410]
 position = Vector2(219, 16)
 shape = SubResource("RectangleShape2D_nm4qu")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="portal_para_rua" to="portal_para_rua" method="_on_body_entered"]

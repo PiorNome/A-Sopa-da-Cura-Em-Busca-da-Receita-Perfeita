@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="A Sopa da Cura: Em Busca da Receita Perfeita"
-run/main_scene="uid://h7e24jycoxur"
+run/main_scene="uid://dsa4ncis7m1ls"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://d3pxhmf0kuisv"
 
@@ -23,6 +23,11 @@ window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[global_group]
+
+Protagonista=""
+portal=""
 
 [input]
 

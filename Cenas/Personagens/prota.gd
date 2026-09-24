@@ -4,7 +4,7 @@ const JUMP_VELOCITY = -400.0
 const SPEED = 150
 var vida = 3
 
-
+signal mudar_cenario(caminho:String, localizacao)
 
 func _physics_process(_delta: float) -> void:
 	# Cria um vetor com as direções X e Y baseadas nas teclas pressionadas
@@ -40,3 +40,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 		if vida == 0:
 			pass # Cena de game over
+	
+	if area.is_in_group("portal"):
+		mudar_cenario.emit(area.proxima_cena, area.localizacao_teleporte)
