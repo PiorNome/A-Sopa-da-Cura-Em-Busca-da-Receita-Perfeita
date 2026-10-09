@@ -129,23 +129,26 @@ sources/1 = SubResource("TileSetAtlasSource_niau3")
 sources/3 = SubResource("TileSetAtlasSource_k1bug")
 sources/4 = SubResource("TileSetAtlasSource_yf2bb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifgjm"]
+size = Vector2(30, 21)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogq8d"]
-size = Vector2(10, 286)
+size = Vector2(10, 224)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0p3"]
-size = Vector2(462, 34)
+size = Vector2(176, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyap7"]
-size = Vector2(8, 243)
+size = Vector2(8, 221)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irt5y"]
-size = Vector2(181, 21)
+size = Vector2(429, 29)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyur1"]
-size = Vector2(224, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsdpt"]
+size = Vector2(211, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nm4qu"]
-size = Vector2(27, 29)
+size = Vector2(31.25, 38.5)
 
 [node name="QuartoInicial" type="Node2D" unique_id=125267515]
 script = SubResource("GDScript_0pfgt")
@@ -161,45 +164,63 @@ tile_set = SubResource("TileSet_ogq8d")
 light_mask = 31
 visibility_layer = 31
 scale = Vector2(2.5, 2.5)
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAFAAIAAAAAAAIAAAAFAAIAAAAAAAMAAAAFAAIAAAAAAAQAAAAFAAIAAAAAAAUAAAAFAAIAAAABAAAAAAAEAAIAAAACAAAAAAAEAAIAAAADAAAAAAAEAAIAAAAEAAAAAAAEAAIAAAAFAAAAAAAFAAAAAAAGAAAAAAAEAAIAAAAHAAAAAAAEAAIAAAAIAAAAAAAEAAIAAAAJAAAAAAAEAAIAAAAKAAAAAAAEAAIAAAALAAAAAAACAAAAAAAAAAYAAAAAAAEAAAALAAYAAAACAAEAAAALAAEAAAAFAAIAAAALAAIAAAAFAAIAAAALAAMAAAAFAAIAAAALAAQAAAAFAAIAAAALAAUAAAAFAAIAAAABAAYAAAABAAEAAAACAAYAAAABAAEAAAADAAYAAAABAAEAAAAEAAYAAAABAAEAAAAFAAYAAAABAAEAAAAGAAYAAAABAAEAAAAHAAYAAAABAAEAAAAIAAYAAAABAAEAAAAJAAYAAAABAAEAAAAKAAYAAAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAFAAIAAAAAAAIAAAAFAAIAAAAAAAMAAAAFAAIAAAAAAAQAAAAFAAIAAAAAAAUAAAAFAAIAAAABAAAAAAAEAAIAAAACAAAAAAAEAAIAAAADAAAAAAAEAAIAAAAEAAAAAAAEAAIAAAAFAAAAAAABAAEAAAAGAAAAAAAEAAIAAAAHAAAAAAAEAAIAAAAIAAAAAAAEAAIAAAAJAAAAAAAEAAIAAAAKAAAAAAAEAAIAAAALAAAAAAACAAAAAAAAAAYAAAAAAAEAAAALAAYAAAACAAEAAAALAAEAAAAFAAIAAAALAAIAAAAFAAIAAAALAAMAAAAFAAIAAAALAAQAAAAFAAIAAAALAAUAAAAFAAIAAAABAAYAAAABAAEAAAACAAYAAAABAAEAAAADAAYAAAABAAEAAAAEAAYAAAABAAEAAAAFAAYAAAAFAAAAAAAGAAYAAAABAAEAAAAHAAYAAAABAAEAAAAIAAYAAAABAAEAAAAJAAYAAAABAAEAAAAKAAYAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_eg0p3")
 collision_visibility_mode = 1
 
 [node name="moveis" type="TileMapLayer" parent="." unique_id=1351049951]
 scale = Vector2(2.5, 2.5)
-tile_map_data = PackedByteArray("AAAFAAEAAAAEAAEAAAAFAAIAAAAGAAEAAAAFAAMAAAAEAAEAAAABAAMAAAADAAEAAAAKAAMAAAAFAAEAAAAFAAUAAAAEAAIAAAACAAUAAAAEAAMAAAADAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAAKAAQAAAAGAAEAAAAKAAIAAAAGAAEAAAABAAIAAAAGAAEAAAABAAQAAAAGAAEAAAACAAEAAAAEAAMAAAADAAEAAAAEAAMAAAAEAAEAAAAEAAMAAAAGAAEAAAAEAAMAAAAHAAEAAAAEAAMAAAAIAAEAAAAEAAMAAAAJAAEAAAAEAAMAAAAGAAMAAAAEAAMAAAAHAAMAAAAEAAMAAAAIAAMAAAAEAAMAAAAJAAMAAAAEAAMAAAACAAMAAAAEAAMAAAADAAMAAAAEAAMAAAAEAAMAAAAEAAMAAAAGAAUAAAAEAAMAAAAHAAUAAAAEAAMAAAAIAAUAAAAEAAMAAAAJAAUAAAAEAAMAAAAKAAUAAAAFAAIAAAABAAUAAAADAAIAAAABAAEAAAADAAAAAAAKAAEAAAAFAAAAAAAFAAQAAAAGAAEAAAACAAAAAQAAAAAAAAADAAAAAQABAAAAAAAKAAAAAQABAAIAAAAJAAAAAQAAAAIAAAAJAAIAAwAAAAAAAAAIAAIABAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAFAAEAAAAEAAAAAAAFAAIAAAAGAAEAAAAFAAMAAAAEAAEAAAABAAMAAAADAAEAAAAKAAMAAAAFAAEAAAAFAAUAAAAEAAEAAAACAAUAAAAEAAMAAAADAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAAKAAQAAAAGAAEAAAAKAAIAAAAGAAEAAAABAAIAAAAGAAEAAAABAAQAAAAGAAEAAAACAAEAAAAEAAMAAAADAAEAAAAEAAMAAAAEAAEAAAAEAAMAAAAGAAEAAAAEAAMAAAAHAAEAAAAEAAMAAAAIAAEAAAAEAAMAAAAJAAEAAAAEAAMAAAAGAAMAAAAEAAMAAAAHAAMAAAAEAAMAAAAIAAMAAAAEAAMAAAAJAAMAAAAEAAMAAAACAAMAAAAEAAMAAAADAAMAAAAEAAMAAAAEAAMAAAAEAAMAAAAGAAUAAAAEAAMAAAAHAAUAAAAEAAMAAAAIAAUAAAAEAAMAAAAJAAUAAAAEAAMAAAAKAAUAAAAFAAIAAAABAAUAAAADAAIAAAABAAEAAAADAAAAAAAKAAEAAAAFAAAAAAAFAAQAAAAGAAEAAAACAAAAAQAAAAAAAAADAAAAAQABAAAAAAAKAAAAAQABAAIAAAAJAAAAAQAAAAIAAAAJAAIAAwAAAAAAAAAIAAIABAAAAAAAAAA=")
 tile_set = SubResource("TileSet_yycl1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2129193644]
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=259887441]
+position = Vector2(140, 29)
+shape = SubResource("RectangleShape2D_ifgjm")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2004951291]
-position = Vector2(20, 143)
+position = Vector2(20, 130)
 shape = SubResource("RectangleShape2D_ogq8d")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1554450842]
-position = Vector2(234, 257)
+position = Vector2(112, 257)
 shape = SubResource("RectangleShape2D_eg0p3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1983594924]
-position = Vector2(458, 119.5)
+position = Vector2(458, 129.5)
 shape = SubResource("RectangleShape2D_hyap7")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1045525894]
-position = Vector2(106.5, 0.5)
+position = Vector2(239.5, 4.5)
 shape = SubResource("RectangleShape2D_irt5y")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1587035070]
-position = Vector2(354, 0)
-shape = SubResource("RectangleShape2D_hyur1")
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1727334185]
+position = Vector2(348.5, 258)
+shape = SubResource("RectangleShape2D_xsdpt")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=2086859299]
+position = Vector2(100, 29.5)
+shape = SubResource("RectangleShape2D_ifgjm")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=203172923]
+position = Vector2(380, 29)
+shape = SubResource("RectangleShape2D_ifgjm")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=2131754091]
+position = Vector2(420, 30)
+shape = SubResource("RectangleShape2D_ifgjm")
 
 [node name="portal_para_rua" type="Area2D" parent="." unique_id=2053390185 groups=["portal"]]
 script = ExtResource("11_rq0dx")
 proxima_cena = "uid://cxxjtrwxjxm08"
-posicao_x = 460.0
-posicao_y = 166.0
+posicao_x = 696.0
+posicao_y = 360.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_para_rua" unique_id=1331880410]
-position = Vector2(219, 16)
+position = Vector2(219, 255.25)
 shape = SubResource("RectangleShape2D_nm4qu")
 
-[connection signal="body_entered" from="portal_para_rua" to="portal_para_rua" method="_on_body_entered"]
+[connection signal="area_entered" from="portal_para_rua" to="portal_para_rua" method="_on_area_entered"]
+[connection signal="area_exited" from="portal_para_rua" to="portal_para_rua" method="_on_area_exited"]
+[connection signal="body_exited" from="portal_para_rua" to="portal_para_rua" method="_on_body_exited"]

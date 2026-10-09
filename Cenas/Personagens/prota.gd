@@ -42,4 +42,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			pass # Cena de game over
 	
 	if area.is_in_group("portal"):
-		mudar_cenario.emit(area.proxima_cena, area.localizacao_teleporte)
+		if area.teleporte_ativo:
+			mudar_cenario.emit(area.proxima_cena, area.localizacao_teleporte)
