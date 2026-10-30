@@ -214,8 +214,8 @@ shape = SubResource("RectangleShape2D_ifgjm")
 [node name="portal_para_rua" type="Area2D" parent="." unique_id=2053390185 groups=["portal"]]
 script = ExtResource("11_rq0dx")
 proxima_cena = "uid://cxxjtrwxjxm08"
-posicao_x = 696.0
-posicao_y = 360.0
+posicao_x = -72.5
+posicao_y = 582.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_para_rua" unique_id=1331880410]
 position = Vector2(219, 255.25)
