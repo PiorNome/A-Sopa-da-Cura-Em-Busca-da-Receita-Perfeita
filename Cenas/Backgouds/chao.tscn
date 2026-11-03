@@ -276,17 +276,47 @@ resource_name = "Chão do quarto4"
 texture = SubResource("CompressedTexture2D_fmu42")
 0:0/next_alternative_id = 2
 0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7gak"]
 resource_name = "Chão do quarto3"
 texture = ExtResource("2_3x0ee")
 0:0/next_alternative_id = 3
 0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx1vh"]
 resource_name = "Chão do quarto2"
 texture = ExtResource("3_f6r3t")
 0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cypdk"]
 resource_name = "Chão quarto1"
@@ -296,6 +326,16 @@ load_path = "res://.godot/imported/16x16_floor01.png-ba59b086cdf64128acb27b929cd
 resource_name = "Chão do quarto1"
 texture = SubResource("CompressedTexture2D_cypdk")
 0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3c4w"]
 texture = ExtResource("12_8wfgp")
@@ -324,12 +364,15 @@ texture = ExtResource("13_ryh6h")
 0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSet" id="TileSet_fmu42"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 36
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grama"
 terrain_set_0/terrain_0/color = Color(0.17528936, 0.4600199, 2.8878452e-07, 1)
-terrain_set_0/terrain_1/name = "Chao"
+terrain_set_0/terrain_1/name = "Chao Terra"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+terrain_set_1/mode = 0
+terrain_set_1/terrain_0/name = "Chao Casa"
+terrain_set_1/terrain_0/color = Color(0.3811971, 0.25584394, 0.1804387, 1)
 sources/4 = SubResource("TileSetAtlasSource_7eb8h")
 sources/5 = SubResource("TileSetAtlasSource_e7gak")
 sources/6 = SubResource("TileSetAtlasSource_vx1vh")

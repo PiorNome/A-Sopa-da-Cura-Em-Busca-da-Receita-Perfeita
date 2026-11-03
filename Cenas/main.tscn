@@ -11,3 +11,4 @@ script = ExtResource("1_ruij7")
 [node name="Nó_Prota" type="Node2D" parent="." unique_id=59210126]
 
 [node name="Prota" parent="Nó_Prota" unique_id=188786305 instance=ExtResource("2_ruij7")]
+collision_mask = 22

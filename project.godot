@@ -56,6 +56,16 @@ andar_direita={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="personagens"
+2d_physics/layer_2="Paredes"
+2d_physics/layer_3="Movies"
+2d_physics/layer_4="Camera"
+2d_physics/layer_5="Portal"
+2d_physics/layer_6="Chão"
+2d_physics/layer_7="Projeteis"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

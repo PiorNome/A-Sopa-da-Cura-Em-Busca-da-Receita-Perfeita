@@ -40,7 +40,11 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 		if vida == 0:
 			pass # Cena de game over
-	
+	print(area.collision_layer, area.collision_mask)
+
+func _on_colisão_portal_area_entered(area: Area2D) -> void:
+	print(area.collision_layer, " ", area.collision_mask)
 	if area.is_in_group("portal"):
+		print("colidio")
 		if area.teleporte_ativo:
 			mudar_cenario.emit(area.proxima_cena, area.localizacao_teleporte)

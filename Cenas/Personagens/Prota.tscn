@@ -117,15 +117,25 @@ animations = [{
 "speed": 7.5
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=188786305 groups=["Prota"]]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=188786305 groups=["Prota", "Protagonista"]]
+collision_mask = 38
 script = ExtResource("1_8ed47")
 
-[node name="Colisão_Obstculos" type="CollisionShape2D" parent="." unique_id=1158188314]
+[node name="Colisão_Obstculos" type="CollisionShape2D" parent="." unique_id=1165725501]
+position = Vector2(0, 13.500001)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_eg0p3")
+
+[node name="Colisão Portal" type="Area2D" parent="." unique_id=1812200527]
+collision_mask = 16
+
+[node name="Collision" type="CollisionShape2D" parent="Colisão Portal" unique_id=806850742]
 position = Vector2(0, 13.500001)
 scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_eg0p3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1970906806]
+collision_mask = 64
 
 [node name="Receber_dano" type="CollisionShape2D" parent="Area2D" unique_id=1452766910]
 position = Vector2(0, 1)
@@ -150,12 +160,12 @@ offset_bottom = -1.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ogq8d")
-animation = &"Baixo"
-frame = 1
+animation = &"Esquerda"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21384192]
 scale = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
+[connection signal="area_entered" from="Colisão Portal" to="." method="_on_colisão_portal_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
