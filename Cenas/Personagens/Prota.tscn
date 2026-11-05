@@ -70,7 +70,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v8yrf")
 }],
-"loop": 1,
+"loop": 2,
 "name": &"Baixo",
 "speed": 7.5
 }, {
@@ -160,7 +160,7 @@ offset_bottom = -1.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ogq8d")
-animation = &"Esquerda"
+animation = &"Baixo"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21384192]
 scale = Vector2(2.5, 2.5)

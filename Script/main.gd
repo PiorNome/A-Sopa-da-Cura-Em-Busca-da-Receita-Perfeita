@@ -16,6 +16,16 @@ func _process(_delta: float) -> void:
 	
 func mudar_nó(caminho_nova_cena:String, localizacao):
 	
+	var tempotimer = 0.001
+	
+	$"Nó_Prota/Prota".lock_move(false)
+	while true:
+		if $CanvasLayer/ColorRect.color.a >= 1:
+			break
+		else:
+			$CanvasLayer/ColorRect.color[3] += 0.02
+		await get_tree().create_timer(tempotimer).timeout
+	
 	if cena_atual != null:
 		cena_atual.queue_free()
 	$"Nó_Prota/Prota".position.x = localizacao[0]
@@ -25,5 +35,16 @@ func mudar_nó(caminho_nova_cena:String, localizacao):
 	cena_atual = nova_cena.instantiate()
 	
 	$"Nó_mapa".call_deferred("add_child", cena_atual)
+	
+	await get_tree().create_timer(0.5).timeout
+	
+	while true:
+		if $CanvasLayer/ColorRect.color.a <= 0:
+			break
+		else:
+			$CanvasLayer/ColorRect.color[3] -= 0.02
+		await get_tree().create_timer(tempotimer).timeout
+	$"Nó_Prota/Prota".lock_move(true)
+	
 	pass
 	
