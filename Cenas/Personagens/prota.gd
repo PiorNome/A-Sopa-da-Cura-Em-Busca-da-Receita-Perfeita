@@ -55,3 +55,6 @@ func lock_move(mover:bool):
 	pode_andar = mover
 	$AnimatedSprite2D.frame = 1
 	$AnimatedSprite2D.play()
+
+func falas(texto: String):
+	pass

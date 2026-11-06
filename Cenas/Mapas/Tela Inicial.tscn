@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://crq4xg71veynu"]
+
+[ext_resource type="Script" uid="uid://c2icgrasim47c" path="res://Script/tela_inicial.gd" id="1_1aw5d"]
+[ext_resource type="VideoStream" uid="uid://d1vh4agauaim2" path="res://Assets/Bad_Apple_1920x1080_.ogv" id="2_1aw5d"]
+
+[node name="TelaInicial" type="Control" unique_id=1308309934]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1aw5d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=98826255]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2052753559]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=539815484]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_1aw5d")
+volume_db = -11.66
+expand = true
+
+[node name="Fechar" type="Button" parent="CanvasLayer" unique_id=1844156497]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -31.0
+offset_right = 53.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Fechar Jogo
+"
+
+[node name="Iniciar" type="Button" parent="CanvasLayer" unique_id=497369922]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -30.5
+offset_right = 71.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Iniciar Jogo"
+
+[node name="Bad Apple" type="Button" parent="CanvasLayer" unique_id=828759703]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[connection signal="pressed" from="CanvasLayer/Fechar" to="." method="_on_fechar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Bad Apple" to="." method="_on_bad_apple_pressed"]

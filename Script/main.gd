@@ -45,6 +45,3 @@ func mudar_nó(caminho_nova_cena:String, localizacao):
 			$CanvasLayer/ColorRect.color[3] -= 0.02
 		await get_tree().create_timer(tempotimer).timeout
 	$"Nó_Prota/Prota".lock_move(true)
-	
-	pass
-	
