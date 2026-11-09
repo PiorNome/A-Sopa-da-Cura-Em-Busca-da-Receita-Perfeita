@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://daesu7m67blgd"]
+
+[ext_resource type="Script" uid="uid://l5uwubqyotw7" path="res://Script/cenoura.gd" id="1_3po4q"]
+[ext_resource type="Texture2D" uid="uid://ba266c1vgk5hy" path="res://Assets/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="1_it3sg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogq8d"]
+size = Vector2(15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3po4q"]
+atlas = ExtResource("1_it3sg")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogq8d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3po4q")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cenoura" type="Area2D" unique_id=1514523321]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_3po4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=676456087 groups=["Item"]]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ogq8d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1282715259]
+sprite_frames = SubResource("SpriteFrames_ogq8d")
+autoplay = "default"

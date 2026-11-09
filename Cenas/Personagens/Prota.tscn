@@ -118,7 +118,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=188786305 groups=["Prota", "Protagonista"]]
-collision_mask = 38
+collision_mask = 166
 script = ExtResource("1_8ed47")
 
 [node name="Colisão_Obstculos" type="CollisionShape2D" parent="." unique_id=1165725501]
@@ -135,7 +135,7 @@ scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_eg0p3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1970906806]
-collision_mask = 64
+collision_mask = 192
 
 [node name="Receber_dano" type="CollisionShape2D" parent="Area2D" unique_id=1452766910]
 position = Vector2(0, 1)

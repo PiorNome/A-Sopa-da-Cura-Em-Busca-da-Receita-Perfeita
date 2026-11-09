@@ -1,6 +1,6 @@
 extends Control
 
-func mudar_fala(nome:String="???", texto_fala: String = "", cor_borda: Color = Color(0.30, 0.50, 0.52, 1.00), cor_fundo: Color = Color(0,0,0,1), imagem_personagem: ImageTexture = null
+func mudar_fala(nome:String="???", texto_fala: String = "", imagem_personagem: ImageTexture = null, cor_borda: Color = Color(0.30, 0.50, 0.52, 1.00), cor_fundo: Color = Color(0,0,0,1)
 	): # :(
 	$Label.text = texto_fala
 	if not imagem_personagem == null:

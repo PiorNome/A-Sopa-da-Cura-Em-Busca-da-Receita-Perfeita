@@ -11,7 +11,7 @@
 size = Vector2(33, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0p3"]
-size = Vector2(36, 33)
+size = Vector2(11, 197.5)
 
 [node name="RuaForaQuarto" type="Node2D" unique_id=100174279]
 script = ExtResource("1_v11w5")
@@ -46,9 +46,11 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("7_o2pxs")
 proxima_cena = "uid://bphib2avugere"
+posicao_x = 24.0
+posicao_y = 456.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_campo_aberto" unique_id=1027606999]
-position = Vector2(1901, 259.5)
+position = Vector2(1848.5, 239.75)
 shape = SubResource("RectangleShape2D_eg0p3")
 
 [connection signal="area_exited" from="portal_quarto_inicial" to="portal_quarto_inicial" method="_on_area_exited"]
