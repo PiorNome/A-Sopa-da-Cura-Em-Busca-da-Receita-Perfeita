@@ -25,6 +25,7 @@ animations = [{
 collision_layer = 128
 collision_mask = 0
 script = ExtResource("1_3po4q")
+nome = "Cenoura"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=676456087 groups=["Item"]]
 position = Vector2(0.5, 0)

@@ -141,21 +141,23 @@ collision_mask = 192
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_ogq8d")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=376984621]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1642207029]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=376984621]
 offset_left = -640.0
 offset_top = -362.0
 offset_right = 639.0
 offset_bottom = 359.0
 color = Color(1, 1, 1, 0)
 
-[node name="balao_fala" parent="ColorRect" unique_id=1289510213 instance=ExtResource("3_8ed47")]
+[node name="balao_fala" parent="CanvasLayer/ColorRect" unique_id=1289510213 instance=ExtResource("3_8ed47")]
 visible = false
 z_index = 10
 layout_mode = 1
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = 641.0
+offset_top = 363.0
+offset_right = 641.0
+offset_bottom = 363.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)

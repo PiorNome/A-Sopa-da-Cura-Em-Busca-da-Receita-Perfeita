@@ -4,6 +4,12 @@ const JUMP_VELOCITY = -400.0
 const SPEED = 150
 var vida = 3
 var pode_andar = true
+var itens_pegos = {
+	0: false,
+	1: false,
+	2: false,
+	3: false
+}
 
 var inventario = {}
 
@@ -52,50 +58,88 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			pass # Cena de game over
 			
 	if area.is_in_group("Item"):
+		adicionar_ao_inventario(area)
+		if itens_pegos[0] and itens_pegos[1] and itens_pegos[2] and itens_pegos[3]:
+			var textos = [{
+				"texto_fala": "Eu peguei todos os ingredientes.",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			},{
+				"texto_fala": "Eu devia voltar para casa para fazer a sopa.",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			}]
+			falas(textos)
+		elif area.id == 0:
+			var textos = [{
+				"texto_fala": "Eu peguei a cenoura!!!",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			},{
+				"texto_fala": "Agora eu devo procurar os outros ingredientes",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			}]
+			falas(textos)
+		elif area.id == 1:
+			var textos = [{
+				"texto_fala": "Eu peguei a mandioca!!!",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			},{
+				"texto_fala": "Agora eu devo procurar os outros ingredientes",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			}]
+			falas(textos)
+		elif area.id == 2:
+			var textos = [{
+				"texto_fala": "Eu peguei a batata!!!",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			},{
+				"texto_fala": "Agora eu devo procurar os outros ingredientes",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			}
+			]
+			falas(textos)
+		elif area.id == 4:
+			var textos = [{
+				"texto_fala": "Eu peguei a cebola!!!",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			},{
+				"texto_fala": "Agora eu devo procurar os outros ingredientes",
+				"imagem_personagem": null,
+				"nome": "Pensamento"
+			}
+			]
+			falas(textos)
+		area.queue_free()
+
+func adicionar_ao_inventario(item):
+	var itens_inventario = []
+	for chave in inventario:
+		if inventario[chave] != null:
+			itens_inventario.append(inventario[chave]["id"])
+	if item.id not in itens_inventario:
 		var slot_encontrado = false
-		
-		var itens_inventario = []
-		
 		for chave in inventario.keys():
 			if inventario[chave] == null:
 				slot_encontrado = true
 				inventario[chave] = {
-					"id": area.id,
-					"Nome": "Cenoura",
-					"quantidade": 1
-					}
-				
-				var textos = [{
-					"texto_fala": "Eu peguei a cenoura!!!",
-					"imagem_personagem": null,
-					"nome": "Pensamento"
-				},{
-					"texto_fala": "Agora eu devo procurar os outros ingredientes",
-					"imagem_personagem": null,
-					"nome": "Pensemento"
+					"id": item.id,
+					"Nome": item.nome,
+					"quantidade": 1,
+					"img": item.img
 				}
-				]
-				falas(textos)
 				break
-				#area.queue_free()
-		
-		if not slot_encontrado:
-			var textos = []
-			if area.id in [0,1,2,3]:
-				textos += [{
-					"texto_fala": "Eu já peguei a cenoura!!!",
-					"imagem_personagem": null,
-					"nome": "Pensamento"
-				},{
-					"texto_fala": "Eu devo procurar os outros ingredientes",
-					"imagem_personagem": null,
-					"nome": "Pensemento"
-				}
-				]
-				
-			area.queue_free()
-			falas(textos)
-	
+	else:
+		for chave in inventario:
+			if inventario[chave]["id"] == item.id:
+				inventario[chave]["quantidade"] += 1
+				break
 
 func _on_colisão_portal_area_entered(area: Area2D) -> void:
 	if area.is_in_group("portal"):
@@ -110,13 +154,13 @@ func lock_move(mover:bool):
 func falas(textos: Array):
 	lock_move(false)
 	for fala in textos:
-		$ColorRect/balao_fala.hide()
+		$CanvasLayer/ColorRect/balao_fala.hide()
 		var texto_fala = fala["texto_fala"]
 		var imagem = fala["imagem_personagem"]
 		var nome = fala["nome"]
 		
-		$ColorRect/balao_fala.mudar_fala(nome, texto_fala, imagem)
-		$ColorRect/balao_fala.show()
+		$CanvasLayer/ColorRect/balao_fala.mudar_fala(nome, texto_fala, imagem)
+		$CanvasLayer/ColorRect/balao_fala.show()
 		
 		await get_tree().process_frame
 		
@@ -126,5 +170,5 @@ func falas(textos: Array):
 		while not Input.is_action_just_pressed("interagir"):
 			await get_tree().process_frame
 			
-	$ColorRect/balao_fala.hide()
+	$CanvasLayer/ColorRect/balao_fala.hide()
 	lock_move(true)
