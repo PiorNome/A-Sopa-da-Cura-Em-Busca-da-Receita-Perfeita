@@ -31,7 +31,6 @@ tile_map_data = PackedByteArray("AAAFAAkABAAEAAcAAAAFAAoABAAEAAgAAAAFAAsABAAEAAk
 [node name="portal_quarto_inicial" type="Area2D" parent="." unique_id=807427080 groups=["portal"]]
 position = Vector2(446, 142)
 collision_layer = 16
-collision_mask = 0
 script = ExtResource("7_o2pxs")
 proxima_cena = "uid://dalav2eifuq78"
 posicao_x = 219.0
@@ -53,4 +52,7 @@ posicao_y = 456.0
 position = Vector2(1848.5, 239.75)
 shape = SubResource("RectangleShape2D_eg0p3")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1112927216]
+
 [connection signal="area_exited" from="portal_quarto_inicial" to="portal_quarto_inicial" method="_on_area_exited"]
+[connection signal="body_entered" from="portal_quarto_inicial" to="." method="_on_portal_quarto_inicial_body_entered"]

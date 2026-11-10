@@ -11,13 +11,10 @@ func _ready() -> void:
 	
 	localizacao_teleporte.append(posicao_x)
 	localizacao_teleporte.append(posicao_y)
-	print("Criando timer")
 	var timer = Timer.new()
 	timer.wait_time = 0.5      # Tempo de espera em segundos
 	timer.one_shot = true
-	print("Adicionando a um nó pai")
 	add_child(timer)
-	print("Conectando o timeout")
 	timer.timeout.connect(_ativar_portal)
 	
 	timer.start()

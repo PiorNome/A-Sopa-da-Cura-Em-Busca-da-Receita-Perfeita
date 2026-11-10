@@ -7,6 +7,8 @@
 
 [sub_resource type="GDScript" id="GDScript_0pfgt"]
 script/source = "extends Node2D
+var som_porta = preload(\"res://Assets/Sounds/door-opening-closing.mp3\")
+@onready var audio_player = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,10 +19,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+
+
+func _on_portal_para_rua_body_entered(_body: Node2D) -> void:
+	audio_player.stream = som_porta
+	audio_player.play()
+	pass # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nm4qu"]
 size = Vector2(31.25, 33)
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_eg0p3"]
 
 [node name="QuartoInicial" type="Node2D" unique_id=125267515]
 script = SubResource("GDScript_0pfgt")
@@ -36,7 +46,6 @@ tile_map_data = PackedByteArray("AAADAAAAAQABAAAAAAACAAAAAQAAAAAAAAAJAAAAAQAAAAI
 
 [node name="portal_para_rua" type="Area2D" parent="." unique_id=2053390185 groups=["portal"]]
 collision_layer = 16
-collision_mask = 0
 script = ExtResource("11_rq0dx")
 proxima_cena = "uid://cxxjtrwxjxm08"
 posicao_x = -72.5
@@ -46,6 +55,10 @@ posicao_y = 582.0
 position = Vector2(220, 255.5)
 shape = SubResource("RectangleShape2D_nm4qu")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2011979780]
+stream = SubResource("AudioStreamMP3_eg0p3")
+
 [connection signal="area_entered" from="portal_para_rua" to="portal_para_rua" method="_on_area_entered"]
 [connection signal="area_exited" from="portal_para_rua" to="portal_para_rua" method="_on_area_exited"]
+[connection signal="body_entered" from="portal_para_rua" to="." method="_on_portal_para_rua_body_entered"]
 [connection signal="body_exited" from="portal_para_rua" to="portal_para_rua" method="_on_body_exited"]

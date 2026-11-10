@@ -216,7 +216,8 @@ texture = ExtResource("10_54bkj")
 2:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_yf5fn"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 32
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_22em3")
 sources/1 = SubResource("TileSetAtlasSource_2b5ci")
 sources/3 = SubResource("TileSetAtlasSource_jcq8o")
@@ -315,7 +316,8 @@ texture_region_size = Vector2i(12, 5)
 
 [sub_resource type="TileSet" id="TileSet_xsdpt"]
 tile_size = Vector2i(16, 13)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_6mayj")
 sources/1 = SubResource("TileSetAtlasSource_ifgih")
 
@@ -372,7 +374,8 @@ texture_region_size = Vector2i(12, 5)
 
 [sub_resource type="TileSet" id="TileSet_ogq8d"]
 tile_size = Vector2i(12, 5)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_ibtqh")
 
 [node name="Levelroot" type="Node2D" unique_id=1276499071]
