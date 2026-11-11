@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cb1o5vb3cpqgg" path="res://Cenas/Backgouds/chao.tscn" id="1_e7vnn"]
 [ext_resource type="Texture2D" uid="uid://dhvsma2l556h4" path="res://Assets/tiles/Top_Down_Kingdom_Tileset_FREE/Top_Down_Kingdom_Tileset_FREE/Tilesets/Castle_1.png" id="2_4rqd6"]
-[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="2_hfxe5"]
 [ext_resource type="Texture2D" uid="uid://e0c3dmpgiixy" path="res://Assets/Pixel 16 v2 village free/Pixel 16 v2 village free.png" id="3_0nwpj"]
 [ext_resource type="Texture2D" uid="uid://bck3fajlir6tt" path="res://Assets/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree_Small.png" id="4_ss0ie"]
 [ext_resource type="Texture2D" uid="uid://ba266c1vgk5hy" path="res://Assets/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="5_v81vw"]
@@ -748,6 +747,3 @@ tile_set = SubResource("TileSet_geqgc")
 scale = Vector2(2.7, 2.7)
 tile_map_data = PackedByteArray("AAAOAAMAAgAFAAkAAAAPAAEAAgAGAAcAAAAPAAMAAgAGAAkAAAAQAAIAAgAHAAgAAAAQAAMAAgAHAAkAAAAQAAQAAgAHAAoAAAARAAUAAgAIAAsAAAANAAMAAgAEAAkAAAANAAQAAgAEAAoAAAANAAUAAgAEAAsAAAANAAYAAgAEAAwAAAANAAcAAgAEAA0AAAAOAAQAAgAFAAoAAAAOAAUAAgAFAAsAAAAOAAYAAgAFAAwAAAAOAAcAAgAFAA0AAAAPAAQAAgAGAAoAAAAPAAUAAgAGAAsAAAAPAAYAAgAGAAwAAAAPAAcAAgAGAA0AAAAQAAUAAgAHAAsAAAAQAAYAAgAHAAwAAAAQAAcAAgAHAA0AAAARAAYAAgAIAAwAAAARAAcAAgAIAA0AAAAOAAIAAgAFAAgAAAAPAAIAAgAGAAgAAAARAAMAAgAIAAkAAAARAAQAAgAIAAoAAAA=")
 tile_set = SubResource("TileSet_eesup")
-
-[node name="CharacterBody2D" parent="." unique_id=188786305 instance=ExtResource("2_hfxe5")]
-position = Vector2(222, 559)

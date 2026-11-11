@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2icgrasim47c" path="res://Script/tela_inicial.gd" id="1_1aw5d"]
 [ext_resource type="VideoStream" uid="uid://d1vh4agauaim2" path="res://Assets/Bad_Apple_1920x1080_.ogv" id="2_1aw5d"]
+[ext_resource type="PackedScene" uid="uid://vwmovh408kd5" path="res://Cenas/Mapas/main menu background.tscn" id="2_v482i"]
 
 [node name="TelaInicial" type="Control" unique_id=1308309934]
 layout_mode = 3
@@ -22,6 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Node2D" parent="CanvasLayer" unique_id=1850779846 instance=ExtResource("2_v482i")]
+
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=539815484]
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,10 +41,10 @@ anchor_left = 0.5
 anchor_top = 0.643
 anchor_right = 0.5
 anchor_bottom = 0.68200004
-offset_left = -53.0
-offset_top = -2.9599915
-offset_right = 53.0
-offset_bottom = -0.040039063
+offset_left = -576.0
+offset_top = -83.95999
+offset_right = -470.0
+offset_bottom = -81.04004
 grow_horizontal = 2
 grow_vertical = 0
 text = "Fechar Jogo
@@ -53,10 +56,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -71.0
-offset_top = -30.5
-offset_right = 71.0
-offset_bottom = 30.5
+offset_left = -588.0
+offset_top = -80.0
+offset_right = -446.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Iniciar Jogo"
@@ -67,11 +70,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -13.0
-offset_top = -17.0
+offset_left = -528.0
+offset_top = -429.0
+offset_right = -520.0
+offset_bottom = -421.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="pressed" from="CanvasLayer/Fechar" to="." method="_on_fechar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bad Apple" to="." method="_on_bad_apple_pressed"]
