@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcm0gnyttakoh" path="res://Cenas/Personagens/prota.gd" id="1_8ed47"]
 [ext_resource type="Texture2D" uid="uid://dfj5bfc4ek3cw" path="res://Assets/Personas/character_9-16.png" id="2_mlm3r"]
+[ext_resource type="Texture2D" uid="uid://dyvqefotwx137" path="res://Assets/Custom Border and Panels Menu All Part/Border All 1.png" id="3_0qwvy"]
 [ext_resource type="PackedScene" uid="uid://c7eeq2b4v2xg1" path="res://Cenas/UI/balao_fala.tscn" id="3_8ed47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0p3"]
@@ -9,6 +10,16 @@ size = Vector2(16, 9.199999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogq8d"]
 size = Vector2(40, 48)
+
+[sub_resource type="ImageTexture" id="ImageTexture_eg0p3"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_hyap7"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ogq8d"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_irt5y"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_hyur1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ucq13"]
 atlas = ExtResource("2_mlm3r")
@@ -141,21 +152,121 @@ collision_mask = 192
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_ogq8d")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=376984621]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1642207029]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=376984621]
 offset_left = -640.0
 offset_top = -362.0
 offset_right = 639.0
 offset_bottom = 359.0
 color = Color(1, 1, 1, 0)
 
-[node name="balao_fala" parent="ColorRect" unique_id=1289510213 instance=ExtResource("3_8ed47")]
+[node name="balao_fala" parent="CanvasLayer/ColorRect" unique_id=1289510213 instance=ExtResource("3_8ed47")]
 visible = false
 z_index = 10
 layout_mode = 1
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = 641.0
+offset_top = 363.0
+offset_right = 641.0
+offset_bottom = 363.0
+
+[node name="Inventario" type="BoxContainer" parent="CanvasLayer" unique_id=1448942110]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -289.0
+offset_top = -127.0
+offset_right = 291.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Slot1" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=239072715]
+position = Vector2(44.079994, 43.999985)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_0qwvy")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer/Inventario/Slot1" unique_id=1745792524]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.85714
+offset_top = -54.14286
+offset_right = -9.143135
+offset_bottom = -8.428858
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_eg0p3")
+metadata/_edit_lock_ = true
+
+[node name="Slot2" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=1641719536]
+position = Vector2(164, 44)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_0qwvy")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer/Inventario/Slot2" unique_id=605479969]
+offset_left = -22.857147
+offset_top = -22.857117
+offset_right = 22.856853
+offset_bottom = 22.856884
+texture = SubResource("ImageTexture_hyap7")
+metadata/_edit_lock_ = true
+
+[node name="Slot3" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=54438987]
+position = Vector2(286, 44)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_0qwvy")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer/Inventario/Slot3" unique_id=792425466]
+offset_left = -22.857162
+offset_top = -22.857141
+offset_right = 22.856838
+offset_bottom = 22.85686
+texture = SubResource("ImageTexture_ogq8d")
+metadata/_edit_lock_ = true
+
+[node name="Slot4" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=448155640]
+position = Vector2(412, 43.999985)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_0qwvy")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer/Inventario/Slot4" unique_id=60926808]
+offset_left = -22.857147
+offset_top = -22.857134
+offset_right = 22.856853
+offset_bottom = 22.856867
+texture = SubResource("ImageTexture_irt5y")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Slot5" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=1975427356]
+position = Vector2(536, 44)
+scale = Vector2(1.3999999, 1.3999999)
+texture = ExtResource("3_0qwvy")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer/Inventario/Slot5" unique_id=481702149]
+offset_left = -22.857185
+offset_top = -22.857174
+offset_right = 22.85711
+offset_bottom = 22.85712
+texture = SubResource("ImageTexture_hyur1")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)
