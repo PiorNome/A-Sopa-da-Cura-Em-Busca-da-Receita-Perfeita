@@ -10,13 +10,20 @@ var itens_pegos = {
 	2: false,
 	3: false
 }
+@onready var slots = [
+	$CanvasLayer/Inventario/Slot1/Imagem, 
+	$CanvasLayer/Inventario/Slot2/Imagem, 
+	$CanvasLayer/Inventario/Slot3/Imagem, 
+	$CanvasLayer/Inventario/Slot4/Imagem, 
+	$CanvasLayer/Inventario/Slot5/Imagem
+]
 
 var inventario = {}
 
 signal mudar_cenario(caminho:String, localizacao)
 
 func _ready() -> void:
-	for i in range(31):
+	for i in range(5):
 		inventario[i] = null
 
 func _physics_process(_delta: float) -> void:
@@ -134,6 +141,7 @@ func adicionar_ao_inventario(item):
 					"quantidade": 1,
 					"img": item.img
 				}
+				atualizar_inventario()
 				break
 	else:
 		for chave in inventario:
@@ -148,6 +156,10 @@ func _on_colisão_portal_area_entered(area: Area2D) -> void:
 
 func lock_move(mover:bool):
 	pode_andar = mover
+	if pode_andar:
+		$CanvasLayer/Inventario.show()
+	else:
+		$CanvasLayer/Inventario.hide()
 	$AnimatedSprite2D.frame = 1
 	$AnimatedSprite2D.play()
 
@@ -172,3 +184,14 @@ func falas(textos: Array):
 			
 	$CanvasLayer/ColorRect/balao_fala.hide()
 	lock_move(true)
+	
+func atualizar_inventario():
+	for chave in inventario:
+		if inventario[chave] != null:
+			var img = slots[0]
+			img.texture = inventario[chave]["img"]
+		else:
+			var img = slots[chave]
+			img.texture = null
+		
+	pass
