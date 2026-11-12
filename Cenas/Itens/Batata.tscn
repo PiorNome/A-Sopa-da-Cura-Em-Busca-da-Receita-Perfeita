@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://3nvgo3armkgg"]
+
+[ext_resource type="Script" uid="uid://l5uwubqyotw7" path="res://Script/cenoura.gd" id="1_6yow4"]
+[ext_resource type="Texture2D" uid="uid://dv8gqk6dudxsn" path="res://Assets/Crops and seed/Potato.png" id="2_4u2cy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogq8d"]
+size = Vector2(15, 14)
+
+[node name="Batata" type="Area2D" unique_id=246569216 groups=["Item"]]
+collision_layer = 128
+script = ExtResource("1_6yow4")
+id = 2
+nome = "Batata"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=63765334]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ogq8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1164846365 groups=["Item"]]
+texture = ExtResource("2_4u2cy")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)

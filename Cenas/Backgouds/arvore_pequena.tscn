@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://igci3kwlkf55"]
+
+[ext_resource type="Texture2D" uid="uid://bck3fajlir6tt" path="res://Assets/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree_Small.png" id="1_e4yat"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktg1l"]
+texture = ExtResource("1_e4yat")
+texture_region_size = Vector2i(7, 3)
+5:1/0 = 0
+5:1/0/z_index = 1
+6:0/0 = 0
+6:0/0/z_index = 1
+6:1/0 = 0
+6:1/0/z_index = 1
+6:2/0 = 0
+6:2/0/z_index = 1
+6:3/0 = 0
+6:3/0/z_index = 1
+6:4/0 = 0
+6:4/0/z_index = 1
+6:5/0 = 0
+6:5/0/z_index = 1
+6:6/0 = 0
+6:6/0/z_index = 1
+6:7/0 = 0
+6:7/0/z_index = 1
+6:8/0 = 0
+6:8/0/z_index = 1
+7:8/0 = 0
+7:8/0/z_index = 1
+7:7/0 = 0
+7:7/0/z_index = 1
+7:6/0 = 0
+7:6/0/z_index = 1
+7:5/0 = 0
+7:5/0/z_index = 1
+7:4/0 = 0
+7:4/0/z_index = 1
+7:3/0 = 0
+7:3/0/z_index = 1
+7:2/0 = 0
+7:2/0/z_index = 1
+7:1/0 = 0
+7:1/0/z_index = 1
+7:0/0 = 0
+7:0/0/z_index = 1
+8:0/0 = 0
+8:0/0/z_index = 1
+8:1/0 = 0
+8:1/0/z_index = 1
+8:2/0 = 0
+8:2/0/z_index = 1
+8:3/0 = 0
+8:3/0/z_index = 1
+8:4/0 = 0
+8:4/0/z_index = 1
+8:5/0 = 0
+8:5/0/z_index = 1
+8:6/0 = 0
+8:6/0/z_index = 1
+8:7/0 = 0
+8:7/0/z_index = 1
+8:8/0 = 0
+8:8/0/z_index = 1
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.4789383, -1.5048856, -3.509884, -1.4880614, -3.489067, 1.5048856, -2.4995532, 1.5048856)
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.49991065, -1.5255005, 3.509884, -1.4880614, 3.489067, 1.5048856, 0.49991062, 1.4739633)
+5:8/0 = 0
+5:8/0/z_index = 1
+5:7/0 = 0
+5:7/0/z_index = 1
+5:6/0 = 0
+5:6/0/z_index = 1
+5:5/0 = 0
+5:5/0/z_index = 1
+5:4/0 = 0
+5:4/0/z_index = 1
+5:3/0 = 0
+5:3/0/z_index = 1
+5:2/0 = 0
+5:2/0/z_index = 1
+6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.49991065, -1.5255005, 3.509884, -1.4880614, 3.4993744, 0.5050643, 0.48960322, 0.50506437)
+5:9/0 = 0
+5:10/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.4995532, -1.4945782, -3.509884, -1.4880614, -3.4993744, 0.5050643, -2.4997077, 0.48122716)
+8:11/0 = 0
+8:9/0 = 0
+8:10/0 = 0
+5:0/0 = 0
+5:0/0/z_index = 1
+6:12/0 = 0
+7:12/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ogq8d"]
+tile_size = Vector2i(7, 3)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_ktg1l")
+
+[node name="ArvorePequena" type="TileMapLayer" unique_id=23950829]
+tile_map_data = PackedByteArray(0, 0, 115, 0, 54, 0, 0, 0, 5, 0, 0, 0, 0, 0, 115, 0, 55, 0, 0, 0, 5, 0, 1, 0, 0, 0, 118, 0, 54, 0, 0, 0, 8, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_ogq8d")

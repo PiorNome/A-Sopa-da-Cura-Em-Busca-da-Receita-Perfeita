@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dibgik4d44b4g"]
+
+[ext_resource type="Texture2D" uid="uid://du1lp4ghf5xnt" path="res://Assets/Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree.png" id="1_jm73d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w61lk"]
+texture = ExtResource("1_jm73d")
+1:0/0 = 0
+1:0/0/z_index = 1
+2:0/0 = 0
+2:0/0/z_index = 1
+0:1/0 = 0
+0:1/0/z_index = 1
+1:1/0 = 0
+1:1/0/z_index = 1
+2:1/0 = 0
+2:1/0/z_index = 1
+3:1/0 = 0
+3:1/0/z_index = 1
+0:2/0 = 0
+0:2/0/z_index = 1
+1:2/0 = 0
+1:2/0/z_index = 1
+2:2/0 = 0
+2:2/0/z_index = 1
+3:2/0 = 0
+3:2/0/z_index = 1
+0:3/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -1.8885174, -8, -1.7086582, 8, 8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.8885174, -8, 1.7086582, 8, -8, 8)
+3:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ogq8d"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_w61lk")
+
+[node name="ArvoreGrande" type="TileMapLayer" unique_id=1168672810]
+tile_set = SubResource("TileSet_ogq8d")

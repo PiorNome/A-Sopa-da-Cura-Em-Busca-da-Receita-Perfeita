@@ -131,10 +131,10 @@ func adicionar_ao_inventario(item):
 		if inventario[chave] != null:
 			itens_inventario.append(inventario[chave]["id"])
 	if item.id not in itens_inventario:
-		var slot_encontrado = false
+		var _slot_encontrado = false
 		for chave in inventario.keys():
 			if inventario[chave] == null:
-				slot_encontrado = true
+				_slot_encontrado = true
 				inventario[chave] = {
 					"id": item.id,
 					"Nome": item.nome,
