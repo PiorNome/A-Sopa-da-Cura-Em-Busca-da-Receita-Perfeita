@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr5giblalqkfy"
+path="res://.godot/imported/C418 - Aria Math (Minecraft Volume Beta) [Copyright Free] - Ringtone M7.mp3-25930d46678e21298c24d77bbff30006.mp3str"
+
+[deps]
+
+source_file="res://Assets/C418 - Aria Math (Minecraft Volume Beta) [Copyright Free] - Ringtone M7.mp3"
+dest_files=["res://.godot/imported/C418 - Aria Math (Minecraft Volume Beta) [Copyright Free] - Ringtone M7.mp3-25930d46678e21298c24d77bbff30006.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

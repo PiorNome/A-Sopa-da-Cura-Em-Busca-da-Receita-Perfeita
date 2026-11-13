@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,8 +13,10 @@ func _process(_delta: float) -> void:
 
 func _on_bad_apple_pressed() -> void:
 	if not $CanvasLayer/VideoStreamPlayer.is_playing():
+		$CanvasLayer/VideoStreamPlayer.show()
 		$"CanvasLayer/Bad Apple".hide()
 		$CanvasLayer/VideoStreamPlayer.play()
+		$AudioStreamPlayer2D.stop()	
 
 
 func _on_fechar_pressed() -> void:
@@ -29,4 +31,6 @@ func _on_iniciar_pressed() -> void:
 
 
 func _on_video_stream_player_finished() -> void:
-	$CanvasLayer/Node2D.show()
+		$"CanvasLayer/Bad Apple".show()
+		$CanvasLayer/VideoStreamPlayer.hide()
+		$AudioStreamPlayer2D.play()
