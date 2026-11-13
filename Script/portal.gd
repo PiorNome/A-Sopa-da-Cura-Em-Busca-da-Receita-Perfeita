@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Protagonista"):
-		teleporte_ativo = true
+		teleporte_ativo = true 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Protagonista"):

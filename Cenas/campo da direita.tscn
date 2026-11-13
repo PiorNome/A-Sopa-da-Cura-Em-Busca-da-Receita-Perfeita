@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cajd3yljfpmu6"]
+
+[ext_resource type="PackedScene" uid="uid://bphib2avugere" path="res://Cenas/Mapas/mapa.tscn" id="1_lvtcs"]
+[ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="2_6vvjt"]
+
+[node name="TesteWalk" type="Node2D" unique_id=768755885]
+
+[node name="Levelroot" parent="." unique_id=1276499071 instance=ExtResource("1_lvtcs")]
+
+[node name="Prota" parent="." unique_id=663750232 instance=ExtResource("2_6vvjt")]
+position = Vector2(19, 508)

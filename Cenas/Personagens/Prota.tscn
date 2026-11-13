@@ -126,6 +126,62 @@ animations = [{
 "loop": 1,
 "name": &"Esquerda",
 "speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucq13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mga5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8yrf")
+}],
+"loop": 2,
+"name": &"down_run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yddk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e6pi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7k6g1")
+}],
+"loop": 2,
+"name": &"left_run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0xw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1edx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bovps")
+}],
+"loop": 2,
+"name": &"right_run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8ffp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mh3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tjug")
+}],
+"loop": 2,
+"name": &"up_run",
+"speed": 12.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=188786305 groups=["Prota", "Protagonista"]]
@@ -271,7 +327,8 @@ metadata/_edit_lock_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ogq8d")
-animation = &"Baixo"
+animation = &"up_run"
+frame_progress = 0.54194146
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21384192]
 scale = Vector2(2.5, 2.5)

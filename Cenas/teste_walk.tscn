@@ -2,10 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://byuefp24mhl3g" path="res://Cenas/Personagens/Prota.tscn" id="1_tg3cx"]
 [ext_resource type="PackedScene" uid="uid://bphib2avugere" path="res://Cenas/Mapas/mapa.tscn" id="2_3fi47"]
+[ext_resource type="PackedScene" uid="uid://3nvgo3armkgg" path="res://Cenas/Itens/Batata.tscn" id="3_tdcje"]
+[ext_resource type="PackedScene" uid="uid://daesu7m67blgd" path="res://Cenas/Itens/Cenoura.tscn" id="4_nbapv"]
 
 [node name="TesteWalk" type="Node2D" unique_id=768755885]
 
 [node name="Levelroot" parent="." unique_id=1276499071 instance=ExtResource("2_3fi47")]
 
 [node name="Prota" parent="." unique_id=663750232 instance=ExtResource("1_tg3cx")]
-position = Vector2(19, 508)
+position = Vector2(473, 411)
+
+[node name="Batata" parent="." unique_id=246569216 instance=ExtResource("3_tdcje")]
+position = Vector2(343, 461)
+
+[node name="Cenoura" parent="." unique_id=1514523321 instance=ExtResource("4_nbapv")]
+position = Vector2(374, 459)
