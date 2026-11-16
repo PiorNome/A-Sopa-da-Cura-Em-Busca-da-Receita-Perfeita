@@ -22,7 +22,6 @@ offset_right = 1469.0
 offset_bottom = 871.0
 color = Color(0, 0, 0, 1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=322736573]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1179540145]
 stream = ExtResource("3_ruij7")
-volume_db = 24.0
 autoplay = true

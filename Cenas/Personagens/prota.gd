@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -400.0
+# const JUMP_VELOCITY = -400.0
 
 # isso aq só serve pra definir a velocidade base em algumas partes do código
 const SPEED = 150
@@ -9,24 +9,24 @@ const SPEED = 150
 # velocidade de andar
 var speed = SPEED
 # quanto maior, maior a velocidade da corrida
-var increment_speed = 150
+var increment_speed = 120
 var is_running = false
 
 
 var vida = 3
 var pode_andar = true
 var itens_pegos = {
-	0: false,
-	1: false,
-	2: false,
-	3: false
+	"0": false,
+	"1": false,
+	"2": false,
+	"3": false
 }
 @onready var slots = [
-	$CanvasLayer/Inventario/Slot1/Imagem, 
-	$CanvasLayer/Inventario/Slot2/Imagem, 
-	$CanvasLayer/Inventario/Slot3/Imagem, 
-	$CanvasLayer/Inventario/Slot4/Imagem, 
-	$CanvasLayer/Inventario/Slot5/Imagem
+	[$CanvasLayer/Inventario/Slot1/Imagem,$CanvasLayer/Inventario/Slot1/Label], 
+	[$CanvasLayer/Inventario/Slot2/Imagem,$CanvasLayer/Inventario/Slot2/Label], 
+	[$CanvasLayer/Inventario/Slot3/Imagem,$CanvasLayer/Inventario/Slot3/Label], 
+	[$CanvasLayer/Inventario/Slot4/Imagem,$CanvasLayer/Inventario/Slot4/Label], 
+	[$CanvasLayer/Inventario/Slot5/Imagem,$CanvasLayer/Inventario/Slot5/Label]
 ]
 
 var inventario = {}
@@ -44,8 +44,8 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu"):
 		get_tree().change_scene_to_file("res://Cenas/Mapas/main menu.tscn")
 	# nao gosto de deixar desse jeito, mas funciona
-	if Input.is_action_pressed("correr"):
-		speed += increment_speed
+	if Input.is_action_just_pressed("correr"):
+		speed = increment_speed + SPEED
 		is_running = true
 	if Input.is_action_just_released("correr"):
 		speed = SPEED
@@ -63,16 +63,8 @@ func _physics_process(_delta: float) -> void:
 					
 		if direction.length() > 0:
 			# mais modificações do Shinwa
-			if is_running:
-				if velocity.x > 0:
-					$AnimatedSprite2D.animation = "right_run"
-				elif velocity.x < 0:
-					$AnimatedSprite2D.animation = "left_run"
-				elif velocity.y > 0:
-					$AnimatedSprite2D.animation = "down_run"
-				elif velocity.y < 0:
-					$AnimatedSprite2D.animation = "up_run"
-			elif not is_running:
+			if not is_running:
+				
 				if velocity.x > 0:
 					$AnimatedSprite2D.animation = "Direito"
 				elif velocity.x < 0:
@@ -82,12 +74,22 @@ func _physics_process(_delta: float) -> void:
 				elif velocity.y < 0:
 					$AnimatedSprite2D.animation = "Cima"
 			else:
-				$AnimatedSprite2D.frame = 1
+				if velocity.x > 0:
+					$AnimatedSprite2D.animation = "right_run"
+				elif velocity.x < 0:
+					$AnimatedSprite2D.animation = "left_run"
+				elif velocity.y > 0:
+					$AnimatedSprite2D.animation = "down_run"
+				elif velocity.y < 0:
+					$AnimatedSprite2D.animation = "up_run"
+		else:
+			$AnimatedSprite2D.frame = 1
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 		$AnimatedSprite2D.frame = 1
 		
 	$AnimatedSprite2D.play()
+	
 	# Move o personagem e lida com as colisões do TileMap automaticamente
 	move_and_slide()
 
@@ -101,7 +103,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			
 	if area.is_in_group("Item"):
 		adicionar_ao_inventario(area)
-		if itens_pegos[0] and itens_pegos[1] and itens_pegos[2] and itens_pegos[3]:
+		if itens_pegos["0"] and itens_pegos["1"] and itens_pegos["2"] and itens_pegos["3"]:
 			var textos = [{
 				"texto_fala": "Eu peguei todos os ingredientes.",
 				"imagem_personagem": null,
@@ -165,6 +167,9 @@ func adicionar_ao_inventario(item):
 	for chave in inventario:
 		if inventario[chave] != null:
 			itens_inventario.append(inventario[chave]["id"])
+		else:
+			itens_inventario.append(null)
+
 	if item.id not in itens_inventario:
 		var _slot_encontrado = false
 		for chave in inventario.keys():
@@ -176,18 +181,19 @@ func adicionar_ao_inventario(item):
 					"quantidade": 1,
 					"img": item.img
 				}
-				atualizar_inventario()
 				break
 	else:
 		for chave in inventario:
 			if inventario[chave]["id"] == item.id:
 				inventario[chave]["quantidade"] += 1
 				break
+	
+	atualizar_inventario()
 
 func _on_colisão_portal_area_entered(area: Area2D) -> void:
 	if area.is_in_group("portal"):
 		if area.teleporte_ativo:
-			mudar_cenario.emit(area.proxima_cena, area.localizacao_teleporte)
+			mudar_cenario.emit(area.proxima_cena, area.referencia)
 
 func lock_move(mover:bool):
 	pode_andar = mover
@@ -223,10 +229,16 @@ func falas(textos: Array):
 func atualizar_inventario():
 	for chave in inventario:
 		if inventario[chave] != null:
-			var img = slots[0]
+			var slot = slots[int(chave)]
+			var img = slot[0]
+			var qntd = slot[1]
 			img.texture = inventario[chave]["img"]
+			qntd.text = str(inventario[chave]["quantidade"])+"x"
 		else:
-			var img = slots[chave]
+			var slot = slots[int(chave)]
+			var img = slot[0]
+			var qntd = slot[1]
 			img.texture = null
+			qntd.text = str("")
 		
 	pass

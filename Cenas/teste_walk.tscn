@@ -16,4 +16,4 @@ position = Vector2(473, 411)
 position = Vector2(343, 461)
 
 [node name="Cenoura" parent="." unique_id=1514523321 instance=ExtResource("4_nbapv")]
-position = Vector2(374, 459)
+position = Vector2(392.09137, 458.97144)

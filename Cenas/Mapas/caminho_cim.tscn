@@ -26,6 +26,7 @@ script = ExtResource("3_nk8ho")
 proxima_cena = "uid://bsdxdybux6rv8"
 posicao_x = 640.0
 posicao_y = 943.0
+referencia = "caminho_cima"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta_campo_cima" unique_id=1097732465]
 position = Vector2(217, 636)
@@ -37,6 +38,7 @@ script = ExtResource("3_nk8ho")
 proxima_cena = "uid://cxxjtrwxjxm08"
 posicao_x = 720.0
 posicao_y = -600.0
+referencia = "caminho_cima"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_baixo" unique_id=678341252]
 position = Vector2(209, 1458)
@@ -44,3 +46,22 @@ shape = SubResource("RectangleShape2D_eg0p3")
 
 [node name="Casas" parent="." unique_id=145456596 instance=ExtResource("4_1ux0p")]
 tile_map_data = PackedByteArray("AAAHAAsAAQAEAAQAAAAHAAwAAQAEAAUAAAAHAA0AAQAEAAYAAAAHABMAAQAEAAQAAAAHABQAAQAEAAUAAAAHABUAAQAEAAYAAAAHABsAAQAEAAQAAAAHABwAAQAEAAUAAAAHAB0AAQAEAAYAAAABABsAAQAEAAQAAAABABwAAQAEAAUAAAABAB0AAQAEAAYAAAABABMAAQAEAAQAAAABABQAAQAEAAUAAAABABUAAQAEAAYAAAABAAsAAQAEAAQAAAABAAwAAQAEAAUAAAABAA0AAQAEAAYAAAABAAMAAQAEAAQAAAABAAQAAQAEAAUAAAABAAUAAQAEAAYAAAAHAAMAAQAEAAQAAAAHAAQAAQAEAAUAAAAHAAUAAQAEAAYAAAABACMAAQAEAAQAAAABACQAAQAEAAUAAAABACUAAQAEAAYAAAAHACMAAQAEAAQAAAAHACQAAQAEAAUAAAAHACUAAQAEAAYAAAAEAAwAAQAAAAIAAAA=")
+
+[node name="Refs_portal" type="Node" parent="." unique_id=651502408]
+
+[node name="vila" type="Control" parent="Refs_portal" unique_id=622334115]
+layout_mode = 3
+anchor_right = 0.031000001
+anchor_bottom = 0.141
+offset_left = 216.0
+offset_top = 1387.0
+offset_right = 216.32
+offset_bottom = 1325.48
+
+[node name="campo_cima" type="Control" parent="Refs_portal" unique_id=1590299950]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 215.0
+offset_top = 671.0
+offset_right = 255.0
+offset_bottom = 711.0

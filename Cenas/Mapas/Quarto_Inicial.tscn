@@ -50,6 +50,7 @@ script = ExtResource("11_rq0dx")
 proxima_cena = "uid://cxxjtrwxjxm08"
 posicao_x = -72.5
 posicao_y = 582.0
+referencia = "casa_prota"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_para_rua" unique_id=1331880410]
 position = Vector2(220, 255.5)
@@ -57,6 +58,24 @@ shape = SubResource("RectangleShape2D_nm4qu")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2011979780]
 stream = SubResource("AudioStreamMP3_eg0p3")
+
+[node name="Refs_portal" type="Node" parent="." unique_id=786381659]
+
+[node name="inicio" type="Control" parent="Refs_portal" unique_id=357344572]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 220.0
+offset_top = 77.0
+offset_right = 239.0
+offset_bottom = 98.0
+
+[node name="porta" type="Control" parent="Refs_portal" unique_id=1069411852]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 220.0
+offset_top = 203.0
+offset_right = 260.0
+offset_bottom = 243.0
 
 [connection signal="area_entered" from="portal_para_rua" to="portal_para_rua" method="_on_area_entered"]
 [connection signal="area_exited" from="portal_para_rua" to="portal_para_rua" method="_on_area_exited"]

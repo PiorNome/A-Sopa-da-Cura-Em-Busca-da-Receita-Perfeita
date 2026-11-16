@@ -6,7 +6,7 @@ func _ready() -> void:
 	var prota = $"Nó_Prota/Prota"
 	prota.mudar_cenario.connect(mudar_nó)
 	
-	mudar_nó("res://Cenas/Mapas/Quarto_Inicial.tscn", [218.0,121.0])
+	mudar_nó("res://Cenas/Mapas/Quarto_Inicial.tscn", "inicio")
 	pass # Replace with function body.
 
 
@@ -28,12 +28,15 @@ func mudar_nó(caminho_nova_cena:String, localizacao):
 	
 	if cena_atual != null:
 		cena_atual.queue_free()
-	$"Nó_Prota/Prota".position.x = localizacao[0]
-	$"Nó_Prota/Prota".position.y = localizacao[1]
+	#$"Nó_Prota/Prota".position.x = localizacao[0]
+	#$"Nó_Prota/Prota".position.y = localizacao[1]
 	
 	var nova_cena = load(caminho_nova_cena)
 	cena_atual = nova_cena.instantiate()
 	
+	var referencia = cena_atual.get_node("Refs_portal/{local}".format({"local": localizacao}))
+	$"Nó_Prota/Prota".position.x = referencia.position.x
+	$"Nó_Prota/Prota".position.y = referencia.position.y
 	$"Nó_mapa".call_deferred("add_child", cena_atual)
 	
 	await get_tree().create_timer(0.5).timeout

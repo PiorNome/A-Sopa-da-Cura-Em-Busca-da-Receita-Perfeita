@@ -81,7 +81,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v8yrf")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"Baixo",
 "speed": 7.5
 }, {
@@ -137,7 +137,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v8yrf")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"down_run",
 "speed": 12.0
 }, {
@@ -151,7 +151,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7k6g1")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"left_run",
 "speed": 12.0
 }, {
@@ -165,7 +165,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bovps")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"right_run",
 "speed": 12.0
 }, {
@@ -179,7 +179,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5tjug")
 }],
-"loop": 2,
+"loop": 0,
 "name": &"up_run",
 "speed": 12.0
 }]
@@ -262,6 +262,15 @@ grow_vertical = 2
 texture = SubResource("ImageTexture_eg0p3")
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="CanvasLayer/Inventario/Slot1" unique_id=1624855977]
+offset_left = -22.200012
+offset_top = 10.714294
+offset_right = 22.942871
+offset_bottom = 22.714294
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="Slot2" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=1641719536]
 position = Vector2(164, 44)
 scale = Vector2(1.4, 1.4)
@@ -277,6 +286,15 @@ offset_bottom = 22.856884
 texture = SubResource("ImageTexture_hyap7")
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="CanvasLayer/Inventario/Slot2" unique_id=1215032843]
+offset_left = -22.14286
+offset_top = 12.142866
+offset_right = 22.999992
+offset_bottom = 24.142866
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="Slot3" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=54438987]
 position = Vector2(286, 44)
 scale = Vector2(1.4, 1.4)
@@ -291,6 +309,15 @@ offset_right = 22.856838
 offset_bottom = 22.85686
 texture = SubResource("ImageTexture_ogq8d")
 metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Inventario/Slot3" unique_id=760467734]
+offset_left = -15.0
+offset_top = 11.428566
+offset_right = 23.0
+offset_bottom = 23.428566
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="Slot4" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=448155640]
 position = Vector2(412, 43.999985)
@@ -308,6 +335,15 @@ texture = SubResource("ImageTexture_irt5y")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="CanvasLayer/Inventario/Slot4" unique_id=195676103]
+offset_left = -15.000013
+offset_top = 10.714282
+offset_right = 22.999987
+offset_bottom = 22.714283
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="Slot5" type="Sprite2D" parent="CanvasLayer/Inventario" unique_id=1975427356]
 position = Vector2(536, 44)
 scale = Vector2(1.3999999, 1.3999999)
@@ -324,11 +360,19 @@ texture = SubResource("ImageTexture_hyur1")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="CanvasLayer/Inventario/Slot5" unique_id=925716892]
+offset_left = -15.0
+offset_top = 10.714281
+offset_right = 23.0
+offset_bottom = 22.714281
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1351128000]
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ogq8d")
-animation = &"up_run"
-frame_progress = 0.54194146
+animation = &"down_run"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21384192]
 scale = Vector2(2.5, 2.5)

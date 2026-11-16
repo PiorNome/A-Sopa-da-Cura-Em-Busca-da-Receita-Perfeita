@@ -4,6 +4,7 @@ extends Area2D
 @export_file() var proxima_cena
 @export var posicao_x: float
 @export var posicao_y:float
+@export var referencia: String
 var localizacao_teleporte = []
 var teleporte_ativo = false
 # Called when the node enters the scene tree for the first time.

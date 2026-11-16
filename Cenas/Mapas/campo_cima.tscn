@@ -36,7 +36,19 @@ script = ExtResource("7_5ym88")
 proxima_cena = "uid://cpqfpb44sba07"
 posicao_x = 217.0
 posicao_y = 636.0
+referencia = "campo_cima"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_baixo" unique_id=1436204317]
 position = Vector2(639.75, 941)
 shape = SubResource("RectangleShape2D_pnedn")
+
+[node name="Refs_portal" type="Node" parent="." unique_id=779397548]
+
+[node name="caminho_cima" type="Control" parent="Refs_portal" unique_id=1288212317]
+layout_mode = 3
+anchor_right = 0.259
+anchor_bottom = 0.384
+offset_left = 634.0
+offset_top = 890.0
+offset_right = 342.47998
+offset_bottom = 653.52

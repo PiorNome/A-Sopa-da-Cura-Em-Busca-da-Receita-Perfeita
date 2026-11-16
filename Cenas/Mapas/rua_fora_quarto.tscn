@@ -39,6 +39,7 @@ script = ExtResource("7_o2pxs")
 proxima_cena = "uid://dalav2eifuq78"
 posicao_x = 219.0
 posicao_y = 63.0
+referencia = "porta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_quarto_inicial" unique_id=387872139]
 position = Vector2(-518, 412)
@@ -50,6 +51,7 @@ script = ExtResource("7_o2pxs")
 proxima_cena = "uid://bphib2avugere"
 posicao_x = 24.0
 posicao_y = 450.0
+referencia = "vila"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_campo_aberto" unique_id=1027606999]
 position = Vector2(1848.5, 239.75)
@@ -63,10 +65,37 @@ script = ExtResource("7_o2pxs")
 proxima_cena = "uid://cpqfpb44sba07"
 posicao_x = 221.0
 posicao_y = 1420.0
+referencia = "vila"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal_caminho_cima" unique_id=1864852692]
 position = Vector2(721, -600)
 shape = SubResource("RectangleShape2D_hyap7")
+
+[node name="Refs_portal" type="Node" parent="." unique_id=1377009867]
+
+[node name="caminho_cima" type="Control" parent="Refs_portal" unique_id=2044232145]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 715.0
+offset_top = -545.0
+offset_right = 726.0
+offset_bottom = -542.0
+
+[node name="campo_direita" type="Control" parent="Refs_portal" unique_id=1098443816]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1782.0
+offset_top = 221.0
+offset_right = 1822.0
+offset_bottom = 261.0
+
+[node name="casa_prota" type="Control" parent="Refs_portal" unique_id=1188133136]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -73.0
+offset_top = 592.0
+offset_right = -53.0
+offset_bottom = 609.0
 
 [connection signal="area_exited" from="portal_quarto_inicial" to="portal_quarto_inicial" method="_on_area_exited"]
 [connection signal="body_entered" from="portal_quarto_inicial" to="." method="_on_portal_quarto_inicial_body_entered"]
